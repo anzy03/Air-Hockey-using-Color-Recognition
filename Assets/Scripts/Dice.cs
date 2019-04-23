@@ -5,18 +5,29 @@ using UnityEngine;
 public class Dice : MonoBehaviour
 {
     float paddleHit = 3.5f;
-    float wallHit = 0.2f;
-    float diceDrag = 0.1f;
+//    float wallHit = 0.2f;
+//    float diceDrag = 0.1f;
     float velocityMulti = 0.2f;
     float minVelocity = 3.5f;
     Vector2 lastRecordedVelocity;
-
+    CircleCollider2D diceCollider;
+    BoxCollider2D[] wallCollider;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        diceCollider = gameObject.GetComponent<CircleCollider2D>();
+        
+        GameObject[] pWalls = GameObject.FindGameObjectsWithTag("Pwall");
+        wallCollider = new BoxCollider2D[pWalls.Length];
+        for(int i =0;i<pWalls.Length;i++)
+        {
+            wallCollider[i] = pWalls[i].GetComponent<BoxCollider2D>();
+            Physics2D.IgnoreCollision(diceCollider,wallCollider[i],true);
+        }
+
     }
 
     // Update is called once per frame
@@ -24,6 +35,8 @@ public class Dice : MonoBehaviour
     {
 
         lastRecordedVelocity = rb.velocity;
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D col)

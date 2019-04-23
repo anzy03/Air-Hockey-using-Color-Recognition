@@ -13,14 +13,14 @@ public class pythonCord : MonoBehaviour
         
         startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
         startInfo.FileName = "cmd.exe";
-        startInfo.Arguments = "/python colorrec.py";
+        startInfo.Arguments = "/c python " + @"colorrec.py";
         process.StartInfo = startInfo;
         //showed error about this.
         process.StartInfo.UseShellExecute = false;
         process.StartInfo.RedirectStandardOutput = true;
         process.Start();
         
-        Debug.Log(process.StandardOutput.ReadToEnd());
+       // Debug.Log(process.StandardOutput.ReadToEnd());
     }
 
     // Update is called once per frame
@@ -28,4 +28,9 @@ public class pythonCord : MonoBehaviour
     {
         Debug.Log(process.StandardOutput.ReadToEnd());
     }
+
+    /* async void Colorrec()
+    {
+
+    } */
 }

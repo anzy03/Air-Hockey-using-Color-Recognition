@@ -55,7 +55,7 @@ public class AI : MonoBehaviour
             else
             {
                 //move towords the goal.
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 4.7f), moveSpeed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 4f), moveSpeed * Time.deltaTime);
             }
 
         }
@@ -68,17 +68,17 @@ public class AI : MonoBehaviour
         {
             StartCoroutine(WaitTime(2f));
         }
-        // Horizontal contraint
+          // Horizontal contraint
         if (transform.position.x < minX)
             transform.position = new Vector3(minX, transform.position.y);
         if (transform.position.x > maxX)
-            transform.position = new Vector3(maxX, transform.position.y);
+            transform.position = new Vector3(maxX, transform.position.y); 
 
         // vertical contraint
         if (transform.position.y < minY)
             transform.position = new Vector3(transform.position.x, minY);
         if (transform.position.y > maxY)
-            transform.position = new Vector3(transform.position.x, maxY);
+            transform.position = new Vector3(transform.position.x, maxY); 
 
 
     }
