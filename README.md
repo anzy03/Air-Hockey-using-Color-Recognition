@@ -14,12 +14,12 @@ This is a 2D Air Hockey game where the contorl of the player is handled by color
 
 ### Screenshots
 
--** Main Menu **
+- ** Main Menu **
 ![Alt text](/Screenshots/NewLook_mainMenu.jpg?raw=true "Main Menu")
 
--** Play Screen **
+- ** Play Screen **
 ![Alt text](/Screenshots/NewLook_MARKING.jpg?raw=true "Play Screen")
 
--** Color Recognition Screen **
+- ** Color Recognition Screen **
 ![Alt text](/Screenshots/color_rec_.jpg?raw=true "Play Screen")
 
