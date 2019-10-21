@@ -8,7 +8,7 @@ This is a 2D Air Hockey game where the contorl of the player is handled by color
 
 ### Installation & Running
 
-1. Install OpenCV for Python using `pip install opencv-python` mkae sure pip is upto date.
+1. Install OpenCV for Python using `pip install opencv-python` make sure pip is upto date.
 
 2. Run the `app.py`file in the `builds` folder.
 
